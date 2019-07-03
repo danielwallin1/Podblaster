@@ -1,0 +1,92 @@
+@import "https://fonts.googleapis.com/css?family=Open+Sans:300,400";
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url("https://fonts.googleapis.com/css?family=Russo+One&display=swap");
+
+@import url('../styles/front.css');
+@import url('../styles/player.css');
+@import url('../styles/volume.css');
+@import url('../styles/progress.css');
+@import url('../styles/episode.css');
+@import url('../styles/markers.css');
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  min-height: 100%;
+  background: linear-gradient(141deg, #0C5B5F 0%, rgba(0, 212, 153, 0.77) 75%);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  list-style-image: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #fff;
+  cursor: pointer;
+}
+
+i {
+  color: #666;
+  margin-top: 4px;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.error-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .error-wrapper {
+    width: 600px;
+  }
+}
+
+.link-startpage {
+  font-size: 36px;
+  color: #000;
+  text-decoration: none;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .link-startpage {
+    text-align: left;
+  }
+}
+
+.heading_error {
+  margin-top: 0;
+  color: #fff;
+  font-size: 46px;
+  font-family: 'Russo One', 'sans-serif';
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .heading-error {
+    text-align: left;
+  }
+}

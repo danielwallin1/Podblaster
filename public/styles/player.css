@@ -1,0 +1,238 @@
+.controllers {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0px;
+}
+
+.starttime {
+  position: absolute;
+  left: 10px;
+  color: #fff;
+  opacity: .6;
+  font-size: 14px;
+  top: 8px;
+}
+
+.player {
+  position: relative;
+  border-radius: 6px;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  box-shadow: 0px 5px 20px 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .player {
+    width: 500px;
+    height: auto;
+  }
+}
+
+.total-time {
+  position: absolute;
+  color: #fff;
+  opacity: 0.6;
+  right: 10px;
+  font-size: 14px;
+  top: 8px;
+}
+
+.head {
+  color: white;
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+  height: 81%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .head {
+    height: 200px;
+  }
+}
+
+.display-area img {
+  height: 100%;
+  width: auto;
+}
+
+@media (min-width: 1024px) {
+  .display-area img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.controllers {
+  display: flex;
+  justify-content: center;
+}
+
+.display-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 100%;
+}
+
+.bottom-section {
+  height: auto;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  .bottom-section {
+    position: relative;
+  }
+}
+
+.control-button-skip {
+  position: relative;
+  border-radius: 100%;
+  background-image: -webkit-linear-gradient(top,#444 0,#333 100%);
+  background-image: linear-gradient(to bottom,#444 0,#333 100%);
+  vertical-align: middle;
+  padding: 2px;
+  line-height: 1;
+  width: 47px;
+  height: 47px;
+  margin: 5px;
+  display: inline-block;
+  color: rgba(255,255,255,.9);
+  box-shadow: inset 0 0 8px rgba(0,0,0,.5), inset 0 1px 3px 1px rgba(255,255,255,.1), 0 1px #222, 0 2px #222, 0 3px #222, 0 4px #222, 0 8px 8px rgba(0,0,0,.5);
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.control-button {
+  position: relative;
+  border-radius: 100%;
+  background-image: -webkit-linear-gradient(top,#444 0,#333 100%);
+  background-image: linear-gradient(to bottom,#444 0,#333 100%);
+  vertical-align: middle;
+  padding: 8px;
+  line-height: 1;
+  width: 60px;
+  height: 60px;
+  margin: 8px;
+  display: inline-block;
+  color: rgba(255,255,255,.9);
+  box-shadow: inset 0 0 8px rgba(0,0,0,.5), inset 0 1px 3px 1px rgba(255,255,255,.1), 0 1px #222, 0 2px #222, 0 3px #222, 0 4px #222, 0 8px 8px rgba(0,0,0,.5);
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.gradientinset {
+  cursor: pointer;
+  margin: 4px;
+  border-radius: 100%;
+  background-image: -webkit-linear-gradient(bottom,#444 0,#222 100%);
+  background-image: linear-gradient(to top,#444 0,#222 100%);
+  background-size: contain;
+  position: relative;
+  box-shadow: inset 0 0 16px rgba(0,0,0,.4), inset 0 1px 2px rgba(255,255,255,.4);
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.gradientinset-skip {
+  cursor: pointer;
+  margin: 4px;
+  margin-top: 12px;
+  height: 57px;
+  border-radius: 100%;
+  background-image: -webkit-linear-gradient(bottom,#444 0,#222 100%);
+  background-image: linear-gradient(to top,#444 0,#222 100%);
+  background-size: contain;
+  position: relative;
+  box-shadow: inset 0 0 22px rgba(0,0,0,.4), inset 0 1px 2px rgba(255,255,255,.4);
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.material-icons:hover {
+  color: #fff;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  margin: 0;
+  color: rgba(255, 255, 255, 0.5);
+  background: transparent;
+  font-size: 35px;
+  margin-top: 5px;
+  margin-left: 4px;
+}
+
+.control-area,
+.player,
+.head {
+  background-color: #333;
+  box-shadow: inset 0 0 5px rgba(0,0,0,.5);
+  border-bottom: 1px solid #111;
+  border-top: 1px solid #565656;
+  background-image: -webkit-radial-gradient(65% center,circle,rgba(255,255,255,.1) 0,rgba(255,255,255,0) 50%);
+  background-image: radial-gradient(circle at 65% center,rgba(255,255,255,.1) 0,rgba(255,255,255,0) 50%);
+}
+
+.player {
+  padding: 0;
+}
+
+@media (min-width: 1024px) {
+  .player {
+    padding: 10px 14px;
+  }
+}
+
+.pod-heading {
+  opacity: .4;
+  font-size: 36px;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .pod-heading {
+    text-align: left;
+  }
+}
+
+.main {
+  display: flex;
+  transform: scale(0.9);
+  justify-content: space-between;
+  margin-left: -30px;
+}
+
+@media (min-width: 1024px) {
+  .main {
+    transform: none;
+  }
+}
+
+.basic-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-left: -55px;
+}
+
+@media (min-width: 1024px) {
+  .basic-controls {
+    margin-left: 0;
+  }
+}

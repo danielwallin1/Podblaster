@@ -1,0 +1,41 @@
+.episode-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:flex-start;
+}
+
+.episode-list {
+  margin: 0 auto;
+}
+
+.episode-link {
+  text-decoration: none;
+  font-size: 24px;
+  color: #000;
+}
+
+.go-back-link {
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (min-width: 1024px) {
+  .go-back-link {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #000;
+  }
+}
+
+.go-back-link:after {
+  content: '\21A0';
+  float: right;
+  margin-left: 5px;
+  margin-top: -10px;
+  font-size: 28px;
+}

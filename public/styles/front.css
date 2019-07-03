@@ -1,0 +1,74 @@
+.heading {
+  font-family: 'Russo One', 'sans-serif';
+  color: #fff;
+  letter-spacing: 2px;
+  font-size: 45px;
+  text-shadow: 2px 2px #000;
+}
+
+@media (min-width: 1024px) {
+  .heading {
+    font-size: 60px;
+  }
+}
+
+.heading__episodes {
+  font-size: 46px;
+  margin-top: 0;
+}
+
+@media (min-width: 1024px) {
+  .heading__episodes {
+    font-size: 60px;
+  }
+}
+
+.heading__header {
+  position: absolute;
+  top: 20px;
+  left: auto;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+@media (min-width: 1024px) {
+  .heading__header {
+    left: 20px;
+  }
+}
+
+.subheading {
+  margin-top: 15px;
+  color: #fff;
+  letter-spacing: 2px;
+  font-family: 'Russo One', 'sans-serif';
+  text-shadow: 2px 2px #000;
+  font-size: 36px;
+}
+
+.intro {
+  margin: 0;
+  font-size: 36px;
+}
+
+.start-wrapper {
+  display: flex;
+  width: 100%;
+  margin-top: 50px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .start-wrapper {
+    text-align: left;
+  }
+}
+
+.podlist-link {
+  text-decoration: none;
+  color: #000;
+  font-size: 24px;
+}

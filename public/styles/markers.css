@@ -1,0 +1,32 @@
+.marker-area p,
+.marker-area a {
+  font-size: 22px;
+  font-family: 'Russo One', 'sans-serif';
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .marker-area p,
+  .marker-area a {
+    text-align: left;
+  }
+}
+
+.marker-area a {
+  cursor: pointer;
+}
+
+.marker-area {
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 50px;
+}
+
+@media (min-width: 1024px) {
+  .marker-area {
+    padding: 0;
+  }
+}

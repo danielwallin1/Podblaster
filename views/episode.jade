@@ -1,0 +1,45 @@
+extends layout
+
+block content
+  body(class="body")
+    a.heading.heading__header(href="/") Podblaster
+    a.go-back-link(href="/episodes") Back to episodes
+    .player
+      .head
+        .display-area
+          h1.heading.pod-heading #{foundEpisode.name}
+          .marker-area
+      audio(class="audio")
+        source(
+          src="#{foundEpisode.audio}"
+          type="audio/mp3"
+        )
+        volume="0.1"
+        p(Your browser does not support the audio element)
+      .bottom-section
+        .soundline
+          .progress(id="seek-obj" value="0" max="1")
+        .control-area
+          .starttime 00:00
+          .endtime
+          .controllers.active
+            .total-time 00:00
+            .main
+              .basic-controls
+                .gradientinset-skip
+                  div(class="control-button-skip skip-backward")
+                    i(class="material-icons")
+                      |fast_rewind
+                .gradientinset
+                  .control-button
+                    i(class="play material-icons")
+                      |play_arrow
+                .gradientinset-skip
+                  div(class="control-button-skip skip-forward")
+                    i(class="material-icons")
+                      |fast_forward
+              .volume-knob
+                .voluem-knob-fill
+                  .volume-knob-indicator
+
+  script(src="../scripts/index.js" type="module")

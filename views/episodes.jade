@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  body(class="body")
+    a.heading.heading__header(href="/") Podblaster
+    div.episode-wrapper
+      h1.heading.heading__episodes Episodes
+      ul.list.episode-list
+        each val, index in episodes
+          li.list-item
+            a.episode-link(class="episode-link" href= "/episodes/" +  val.id) #{index +1}. #{val.name}
+
