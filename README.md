@@ -72,7 +72,6 @@ If you feel the have the time and desire, after making a solid foundation with t
 
 *Build process with minification of code is not implemented due to shortage of time. I could have implemented the application with a framework such as React/Redux, but my first priority was to demonstrate my javascript skills.*
 
-*I have also added a volume feature, which was not required. The volume knob is functional and the user rotates it to adjust the sound level.*
-&nbsp;
+*I have also added a volume feature, which was not required. The volume knob is functional and the user rotates it to adjust the sound level.*  
 &nbsp;
 ![podblaster](./public/images/podblaster.png)
