@@ -34,47 +34,44 @@ Static assets are in `/audio` and `/images`.
 
 The player allows the user to play, pause, seek forward/back (jump ahead or back five seconds), and to jump to a user-chosen point in the timeline.
 
-Implementerat. Användaren kan klicka på utvalda ställen på tidslinjen och hoppa till en specifik
-plats i podden.
+*Implemented. The user clicks on selected places on the timeline and jumps to a specific location in the pod. The user is able to play, pause and jump five seconds forward or backword with the buttons.*
 
 ### Markers ###
 
 The player also features "markers". A marker is a text, an image or an advertisement that is shown to the user when the current playback time is within the markers start and end time. At most one marker is displayed at any point in time.
 
-Implementerat. Markers visas på definierade sekvenser. I tomma sekvenser, vid start och i pauser har
-jag valt att visa poddens namn.
+*Implemented. Markers are displayed on defined sequences, according to the given serverside data. Insted of having a blank screen in sequences where markers are not present, or when the audio player is not playing, I have chosen to show the name of the pod.*
 
 #### Text Link Marker ####
 
 Displays text.
 
-Implementerat. Text visas på utvalda sekvenser under uppspelning.
+*Implemented. Text is displayed on selected sequences during playback.*
 
 #### Image Link Marker ####
 
 Displays an image.
 
-Implementerat. Bilder visas på utvalda sekvenser under uppspelning.
+*Implemented. Images are displayed on selected sequences during playback.*
 
 #### Advertisement (Ad) Marker ####
 
 Displays text that links to an external URL.
 
-Implementerat. Annonser visas på utvalda sekvenser under uppspelning. Klickar man på annonsen
-kommer man till url:en som annonsen pekar på.
+*Implemented. Ads appear on selected sequences during playback. Clicking on the ad brings you to the given url.*
 
 ##### Optional #####
 
 If you feel the have the time and desire, after making a solid foundation with the aforementioned features, you can make the ad markers a little bit special. If an ad is playing the user shall not be able to skip past it. Playing and pausing is OK. If the user attempts to skip past an entire ad marker then the skipped over ad marker shall play before continuing to the position the user skipped to.
 
-Implementerat. Om användaren klickar på fast forward när en annons visas, sker detta först efter
-att annonsen har visats klart. Användaren får ej indikation på att annonsen måste spelas färdigt
-innan den hoppar framåt till utvalt stället, detta pga tidsbrist.
+*Implemented. If the user clicks on fast forward when an ad is displayed, then the ad will finish playing before jumping to the chosen position. The user does not get an indication that the ad must be completed before it jumps forward to the selected place. In a realtime scenario, this would have been desirable, to avoid confusion.*
 
 ##### Additional notes #####
 
-Implementerat applikationen för desktop och mobil. Inget ramverk används, endast JavaScript.
-Struktur efter ansvarsområde / separation of concerns, "player", "volume", "progress", "markers",
-enligt designmönster revealing module pattern. Byggprocess ej implementerad pga tidsbrist.
+*The application is responsive, targeting desktop and mobile devices. Techniques used are plain javaScript and CSS. The code is structured by separation of concerns with the modules player, volume, progress and markers, according to "revealing module pattern". Each module has private and public functions and are also able to inherit the prototype from any other of the modules. Helper functions are also added for the modules to use. CSS is divided following the same pattern as the javascript files. With more time I would have prefered to use Sass with nested selectors. I would also have implemented unit tests with Jest.*
 
-Volymknapp är ett tillägg jag har gjort.
+*Build process with minification of code is not implemented due to shortage of time. I could have implemented the application with a framework such as React/Redux, but my first priority was to demonstrate my javascript skills.*
+
+*I have also added a volume feature, which was not required. The volume knob is functional and the user rotates it to adjust the sound level.*
+&nbsp;
+![podblaster](./public/images/podblaster.png)
