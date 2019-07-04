@@ -74,4 +74,5 @@ If you feel the have the time and desire, after making a solid foundation with t
 
 *I have also added a volume feature, which was not required. The volume knob is functional and the user rotates it to adjust the sound level.*
 &nbsp;
+&nbsp;
 ![podblaster](./public/images/podblaster.png)
