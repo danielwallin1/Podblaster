@@ -6,12 +6,14 @@ export const Volume = function() {
   this.centerX	= this.volumeButton.getBoundingClientRect().x + this.radius;
   this.centerY = this.volumeButton.getBoundingClientRect().y + this.radius;
 
-  this.startAngle = 0;
-  this.stopAngle = 0;
-  this.mouseAngle = 0;
+  this.startAngle = 60;
+  this.stopAngle = 60;
+  this.mouseAngle = 60;
 
   const initVolume = () => {
     this.volumeButton.addEventListener('mousedown', startVolume, false);
+    this.volumeButton.style.transform = `rotate(${this.startAngle}deg)`;
+    this.audioPlayer.volume = this.startAngle / 360;
   }
 
   const bindEvents = () => {
@@ -27,10 +29,15 @@ export const Volume = function() {
 
   const trackVolume = event => {
     const { pageX, pageY } = event;
-    this.mouseAngle = getVolumeAngle(pageX, pageY) - this.startAngle
+    this.mouseAngle = getVolumeAngle(pageX, pageY) - this.startAngle;
+
+    if (this.mouseAngle < 0) {
+      this.mouseAngle = 360 - (-this.mouseAngle);
+    }
 
     if (this.mouseAngle > 0) {
-      this.audioPlayer.volume = this.mouseAngle / 360;
+      const volume = this.mouseAngle < 360 ? this.mouseAngle / 360 : 1;
+      this.audioPlayer.volume = volume;
     }
 
     this.volumeButton.style.transform =

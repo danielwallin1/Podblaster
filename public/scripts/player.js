@@ -15,7 +15,6 @@ export const Player = function() {
 
   const playAudio = () => {
     this.audioPlayer.play();
-    this.audioPlayer.volume = .2;
     this.playButton.innerHTML = 'pause_arrow';
     this.endTime.innerHTML = getPlayTime(this.audioPlayer.duration);
   }
